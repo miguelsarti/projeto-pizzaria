@@ -106,3 +106,7 @@ app.post("/vendas", proteger, async (req, res) => {
     await pool.query("UPDATE pizzas SET estoque = estoque - $1 WHERE id = $2", [quantidade, pizza_id]);
     res.redirect("/dashboard");
 });
+
+
+// 🚀 Servidor
+app.listen(3000, () => console.log("🍕 Pizzaria está rodando em localhost:3000"));
